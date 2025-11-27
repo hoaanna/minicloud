@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  application-backend-server:
+    build: ./application-backend-server
+    image: hotensv/app:dev
+    container_name: application-backend-server
+    environment:
+      DB_HOST: relational-database-server
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: mycloud
+    networks:
+      - cloud-net
+    ports:
+      - "8085:8081"
+    depends_on:
+      - relational-database-server
+
+  relational-database-server:
+    image: mariadb:11
+    container_name: relational-database-server
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - ./relational-database-server/init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "3306:3306"
+    networks:
+      - cloud-net
+
+  api-gateway-proxy-server:
+    image: nginx:stable
+    container_name: api-gateway-proxy-server
+    depends_on:
+      - application-backend-server
+    ports:
+      - "80:80"
+    volumes:
+      - ./api-gateway-proxy-server/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - cloud-net
+
+networks:
+  cloud-net:
+    name: cloud-net
