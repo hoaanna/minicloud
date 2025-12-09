@@ -1,0 +1,147 @@
+/* ------------------------------ */
+/*  GLOBAL CSS CHO TOÀN WEBSITE   */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+/* ------------------------------ */
+/* NAVIGATION BAR */
+/* ------------------------------ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #1e3a8a;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.nav-left {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------ */
+/* HERO BANNER */
+/* ------------------------------ */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px; /* top=120, left/right=20, bottom=160 */
+    background: linear-gradient(120deg, #4f46e5, #3973d0);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0 0 15px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    background: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #3b82f6;
+    /* color: #2665ca; */
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.hero-btn:hover {
+    background: #eef2ff;
+}
+
+/* ------------------------------ */
+/* FEATURE SECTION */
+/* ------------------------------ */
+
+.features {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.source {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* ------------------------------ */
+/* FOOTER */
+/* ------------------------------ */
+
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    background: #1e3a8a;
+    color: #fff;
+    font-size: 15px;
+}

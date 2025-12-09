@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Danh sách Blog</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+.blog-list-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 18px;
+}
+
+.blog-card-content h3 {
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #3b82f6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar">
+    <div class="nav-left">MyMiniCloud</div>
+    <ul class="nav-right">
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+</nav>
+
+<div class="blog-list-container">
+    <h1>Danh sách bài viết</h1>
+
+    <div class="blog-grid">
+
+        <!-- BLOG 1 -->
+        <div class="blog-card">
+            <img src="/img/ai.jpg" alt="">
+            <div class="blog-card-content">
+                <h3>Tương Lai Trí Tuệ Nhân Tạo</h3>
+                <p>Bài viết về xu hướng phát triển AI trong 10 năm tới...</p>
+                <a href="/blog/blog1.html" class="btn">Đọc bài viết</a>
+            </div>
+        </div>
+
+        <!-- BLOG 2 -->
+        <div class="blog-card">
+            <img src="/img/dalat.jpg" alt="">
+            <div class="blog-card-content">
+                <h3>Khám Phá Đà Lạt</h3>
+                <p>Hành trình khám phá thành phố ngàn hoa...</p>
+                <a href="/blog/blog2.html" class="btn">Đọc bài viết</a>
+            </div>
+        </div>
+
+        <!-- BLOG 3 -->
+        <div class="blog-card">
+            <img src="/img/zero-waste.webp" alt="">
+            <div class="blog-card-content">
+                <h3>Lối Sống Zero Waste: "Trend" Nhất Thời Hay Cuộc Cách Mạng Của Gen Z?</h3>
+                <p>Chuyên mục: Môi trường & Lối sống</p>
+                <a href="/blog/blog3.html" class="btn">Đọc bài viết</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🔹 FOOTER -->
+<footer>
+    © 2025 MyMiniCloud Project — Designed by <strong>52200182-52200220-52200153</strong>
+</footer>
+
+</body>
+</html>
